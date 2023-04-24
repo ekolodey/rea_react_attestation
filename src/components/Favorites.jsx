@@ -6,11 +6,11 @@ import { Button, Card, Container, Row } from 'react-bootstrap'
 function FavoritesItem(props){
 
     function addToCart(){
-        axios.post('http://185.185.68.165/react_attestation/cart', {'id': props.id});
+        axios.post('https://ekolodey.01sh.ru/react_attestation/cart', {'id': props.id});
     }
     
     function deleteItem(){
-        axios.delete('http://185.185.68.165/react_attestation/favorites/' + props.id);
+        axios.delete('https://ekolodey.01sh.ru/react_attestation/favorites/' + props.id);
         props.setItems(props.items.filter(e=>e.id != props.id));
     }
 
@@ -30,7 +30,7 @@ export default function Favorites() {
     const [items, setItems] = React.useState([]);
 
     React.useEffect(()=>{
-        axios.get('http://185.185.68.165/react_attestation/favorites').then((r)=>{
+        axios.get('https://ekolodey.01sh.ru/react_attestation/favorites').then((r)=>{
             setItems(r.data);
         })
     },[]);

@@ -8,17 +8,17 @@ export default function Item(){
     const [item, setItem] = React.useState({});
 
     React.useEffect(()=>{
-        axios.get('http://185.185.68.165/react_attestation/goods/'+params.id).then((r)=>{
+        axios.get('https://ekolodey.01sh.ru/react_attestation/goods/'+params.id).then((r)=>{
             setItem(r.data);
         })
     },[]);
 
     function addToCart(){
-        axios.post('http://185.185.68.165/react_attestation/cart', {'id':params.id});
+        axios.post('https://ekolodey.01sh.ru/react_attestation/cart', {'id':params.id});
     }
 
     function addToFavorites(){
-        axios.post('http://185.185.68.165/react_attestation/favorites', {'id':params.id});
+        axios.post('https://ekolodey.01sh.ru/react_attestation/favorites', {'id':params.id});
     }
 
     return (

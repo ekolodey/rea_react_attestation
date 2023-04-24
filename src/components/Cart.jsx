@@ -4,13 +4,13 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 
 function CartCard(props){
     function addItem(){
-        axios.post('http://185.185.68.165/react_attestation/cart', {'id': props.id});
+        axios.post('https://ekolodey.01sh.ru/react_attestation/cart', {'id': props.id});
         props.items.find(e => e.id == props.id).count++;
         props.setItems([...props.items]);
     }
 
     function delItem(){
-        axios.delete('http://185.185.68.165/react_attestation/cart/'+props.id);
+        axios.delete('https://ekolodey.01sh.ru/react_attestation/cart/'+props.id);
         const item = props.items.find(e => e.id == props.id);
         item.count--;
 
@@ -42,13 +42,13 @@ export default function Cart() {
     const [items, setItems] = React.useState([]);
 
     React.useEffect(()=>{
-        axios.get('http://185.185.68.165/react_attestation/cart').then((r)=>{
+        axios.get('https://ekolodey.01sh.ru/react_attestation/cart').then((r)=>{
             setItems(r.data);
         })
     },[]);
 
     function clearCart(){
-        axios.delete('http://185.185.68.165/react_attestation/cart');
+        axios.delete('https://ekolodey.01sh.ru/react_attestation/cart');
         setItems([]);
     }
 

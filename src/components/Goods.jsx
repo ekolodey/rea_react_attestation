@@ -4,7 +4,7 @@ import { Button, Card, Container, Row } from 'react-bootstrap'
 
 function GoodsCard(props){
     function addToCart(id){
-        axios.post('http://185.185.68.165/react_attestation/cart', {'id': id});
+        axios.post('https://ekolodey.01sh.ru/react_attestation/cart', {'id': id});
     }
 
     return (
@@ -22,7 +22,7 @@ export default function Goods() {
     const [items, setItems] = React.useState([]);
 
     React.useEffect(()=>{
-        axios.get('http://185.185.68.165/react_attestation/goods').then((r)=>{
+        axios.get('https://ekolodey.01sh.ru/react_attestation/goods').then((r)=>{
             setItems(r.data);
         })
     },[]);
