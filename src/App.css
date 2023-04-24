@@ -1,0 +1,50 @@
+body {
+    font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #FFDAD4;
+    padding: 15pt;
+    border-bottom: 1px #F90A0A solid;
+}
+
+.nav-link {
+    color: #A834EF;
+    font-size: 20pt;
+}
+
+.nav-link:hover {
+    color: #F9369F;
+}
+
+
+footer {
+    background-color: #F7A7A7;
+}
+
+main h1 {
+    color: #F40494;
+    text-align: center;
+}
+
+main > .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.card {
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn-primary {
+    border-radius: 1rem;
+    border: 2px #F91717 solid;
+    background-color: white;
+    color: black;
+}
